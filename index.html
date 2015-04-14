@@ -10,27 +10,28 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <style>
 
-.prototypes .item,
-.inprogress .item {
+section {
+	padding-top: 20px;
+}
+
+section .item {
 	padding: 10px 0;
 	margin-bottom: 20px;
 	background-color: #EEE;
 }
-.inprogress .item {
-	padding: 10px;
-}
 h3 {
 	margin-top: 0;
 }
-.prototypes .span4 a {
+h5 {
+	margin-bottom: 0;
+}
+section .item .span4 a {
 	padding-left: 10px;
 }
-.prototypes ul.links {
-	padding: 10px 0;
-	margin: 0;
+section .item .links {
 }
-.prototypes ul.links li {
-	list-style: none;
+section .item .links li {
+	padding: 2px;
 }
 .footer {
 	margin-top: 10px;
@@ -43,26 +44,72 @@ h3 {
 
 <div class="container">
 
+<header class="header">
 <h1>LinkedTV @ CWI</h1>
-Within the EU FP7 project <a href="http://www.linkedtv.eu">LinkedTV</a> we investigate information interfaces for hypervideo.
+</header>
+
+<p>	
+Within the EU FP7 project <a href="http://www.linkedtv.eu">LinkedTV</a> we investigate information interfaces for enriched video experiences.
+</p>
 
 <section class="prototypes">
 <h2>Prototypes</h2>
-
 <div class="item"><div class="row">
 	<div class="span4">
 		<a href="http://linkedtv.project.cwi.nl/news/"><img src="img/linkedtv_news/passive_mode.png"></a>
 	</div>
 	<div class="span8">
-		<h3>Second screen News companion prototype</h3>
+		<h3>International News companion</h3>
 		LinkedTV News is a second screen application for tablets that acts as a companion to viewers when watching the news broadcasts. Its main goal is to enrich television newscasts by integrating them with other media thus, integrating and concentrating the different activities related to getting informed about the news in one interactive multiple screen, and potentially mobile experience. It is designed to accommodate two viewing modes in terms of interaction: a lean back mode and a lean forward mode.
+		<h5>Links</h5>
 		<ul class="links">
-			<li><a href="http://linkedtv.project.cwi.nl/news/">demo</a></li>
-			<li><a href="img/linkedtv_news/">screenshots</a></li>
+			<li><a href="https://vimeo.com/112383692">Video</a></li>
+			<li><a href="http://linkedtv.project.cwi.nl/news/mainscreen.html">Demo</a><br/>
+				Use the QR code or the click the link to open the companion application or open it <a href="http://linkedtv.project.cwi.nl/news">directly</a>.</li>
+			<li><a href="https://github.com/michielhildebrand/linkedtv_news">Source code</a></li>
+		</ul>
+		<h5>Publications</h5>
+		<ul class="links">
+			<li><a href="http://oai.cwi.nl/oai/asset/22563/22563B.pdf">LinkedTV News: A dual mode second screen companion for web-enriched news broadcasts</a>. Pérez Romero, L. Hildebrand, M. Redondo Garcia, J.L. Hardman, L. Proceedings of ACM International Conference on Interactive Experiences for Television and Online Video 2014 (ACM TVX 1), Newcastle, UK.
+			</li>
+			<li><a href="https://repository.cwi.nl/docs/IV/22/22116D.pdf">LinkedTV News: designing a second screen companion for web-enriched news broadcasts</a>. Lilia Pérez Romero</li>
+			</li>
 		</ul>	
 	</div>	
 </div></div>
 
+<div class="item"><div class="row">
+	<div class="span4">
+		<a href="http://linkedtv.project.cwi.nl/culture/"><img src="img/linked_culture.png"></a>
+	</div>
+	<div class="span8">
+		<h3>Linked Culture demonstrator</h3>
+		Linked Culture is a companion application for the Dutch TV program <a href="http://web.avrotros.nl/tussenkunstenkitsch/">Tussen Kunst &amp; Kitsch</a>. It provides a novel way to experience the program. The user starts the application on the tablet and selects an episode or chapter to watch. Optionally the video is beamed to the TV. When a chapter is finished the user explores rich background and related information about the artwork discussed in the chapter. Finally, the user chooses the next chapter to watch from the suggestions provided by the LinkedTV system.
+		<h5>Links</h5>
+		<ul class="links">
+			<li><a href="https://vimeo.com/108891238">Video</a></li>
+			<li><a href="http://linkedtv.project.cwi.nl/culture">Demo</a></li>
+		</ul>
+	</div>	
+</div></div>
+
+<div class="item"><div class="row">
+	<div class="span4">
+		<a href="http://linkedtv.project.cwi.nl/rbb/"><img src="img/linked_news.png"></a>
+	</div>
+	<div class="span8">
+		<h3>Linked News demonstrator</h3>
+		Linked News is a companion application for the <a href="http://www.rbb-online.de/rbbaktuell/">RBB Aktuell News show</a>. The companion application for News uses the same infrastructure as Linked News. In this case the enrichment dimensions are tailored to the news domain.
+		<h5>Links</h5>
+		<ul class="links">
+			<li><a href="http://linkedtv.project.cwi.nl/rbb/">Demo</a></li>
+		</ul>
+	</div>	
+</div></div>
+</section>
+
+<section class="services">
+<h2>Services</h2>
 <div class="item"><div class="row">
 	<div class="span4">
 		<a href="http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin">
@@ -72,25 +119,57 @@ Within the EU FP7 project <a href="http://www.linkedtv.eu">LinkedTV</a> we inves
 	<div class="span8">
 		<h3>Entity proxy</h3>
 		The entity proxy is a web service that provides uniform access to display information about entities. 
-		Given a URI from <a href="http://dbpedia.org/">DBPedia</a> or <a href="http://wikipedia.org">Wikipedia</a> it returns an image and description.
+		Given a URI from <a href="http://dbpedia.org/">DBPedia</a> it returns an image and description.
 		Through the <em>lang</em> parameter the language of the description can be specified. 
-		The service crawls the resources provided on different language versions of DBPedia and Wikipedia (en,nl,de and fr). 
+		The service crawls the resources provided on different language versions of DBPedia and Wikipedia (en,nl,de and fr).
+		<h5>Links</h5>
 		<ul class="links">
+			<li><a href="https://github.com/michielhildebrand/linkedtv_entity_proxy">Source code</a></li>
+			<li><a href="http://linkedtv.project.cwi.nl/explore/entity_proxy">Service</a></li>
+		</ul>
+		<h5>Examples</h5>
+		<ul>
 			<li><a href="http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin">http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin</a></li>
 			<li><a href="http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin&lang=en">http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin&lang=en</a></li>
-		</ul>	
+		</ul>
+	</div>	
+</div></div>
+<div class="item"><div class="row">
+	<div class="span4">
+		<img src="img/content_proxy_response.png">
+	</div>
+	<div class="span8">
+		<h3>Content proxy</h3>
+		To generate the content for the LinkedTV companion applications we developed a set of tools that are bundled together in the so-called Content proxy. The source code is made available, but not intended for reuse as such. It serves as an illustration for the type of operations that are needed to generate display information. 
+		<h5>Links</h5>
+		<ul class="links">
+			<li><a href="https://github.com/michielhildebrand/linkedtv_content_proxy">Source code</a></li>
+			<li>Description of the service (coming soon)</li>
+		</ul>
 	</div>	
 </div></div>
 </section>
 
-<h2>Work in progress</h2>
-<section class="inprogress">
-<div class="item">
-We are currently working on a tablet application in the Cultural Heritage domain. 
-<ul class="links">
-	<li><a href="http://pip.ia.cwi.nl/culture">demo</a></li>
-</ul>	
-</section
+<section class="data">
+<h2>Data</h2>
+<div class="item"><div class="row">
+	<div class="span4">
+		<a href="http://linkedtv.project.cwi.nl/explore/entity_proxy?url=http://de.dbpedia.org/resource/Berlin">
+		<img src="img/judgements_per_entity.png">
+		</a>
+	</div>
+	<div class="span8">
+		<h3>Interesting entities in News videos</h3>
+		 We investigated the user preferences for identifying interesting entities to enrich news videos. The Linked News application helps viewers answer questions that are triggered by the content of the video. Who is that person? Where is this organization located? To effectively support viewers to answer these types of questions the application needs to present the entities that are interesting to the user to receive more information about and link to the appropriate source of this information. In the study we created a dataset of candidate entities for 5 short videos from the <a href="http://www.bbc.com/news/video_and_audio/">BBC One Minute World News Website</a>. We manually identified the entities from different sources and annotated them with their type and their relation to the topic of the video. We also asked an expert to provide the interesting entities for each video. With an online survey we collected feedback on the interestingness of these named entities from 50 participants.
+		 <h5>Links</h5>
+		<ul class="links">
+			<li>Data set (coming soon)</li>
+			<li>LinkedTV deliverable D3.8 (coming soon)</li>
+		</ul>
+	</div>	
+</div></div>
+</section>
+
 
 <section>
 <h2>People</h2>
@@ -105,7 +184,7 @@ We are currently working on a tablet application in the Cultural Heritage domain
 </section>
 
 <footer class="footer">
-<p><a href="http://www.linkedtv.eu/">LinkedTV 2014</a></p>
+<p><a href="http://www.linkedtv.eu/">LinkedTV 2015</a></p>
 </footer>
 </div>
 </body>
